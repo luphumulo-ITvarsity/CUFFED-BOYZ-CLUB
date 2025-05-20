@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxeWardrobe | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+      color: #1a202c;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: none;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav a:hover {
+      color: #4a5568;
+    }
+
+    /* Mobile Menu Button */
+    #menuToggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 66%;
+      height: 100%;
+      background-color: white;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 100;
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu button {
+      align-self: flex-end;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("283a1e19-1a6c-47fd-b43c-8b2a17bce5b1.jfif") center center / cover no-repeat;
+      text-align: center;
+      padding: 8rem 1rem;
+      color: white;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      display: inline-block;
+      border-radius: 0.5rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      background-color: white;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 9999px;
+    }
+
+    .hero a:hover {
+      background-color: #e2e8f0;
+    }
+
+    /* Featured Section */
+    .featured {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .featured h3 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .product-card div {
+      padding: 1rem;
+    }
+
+    .product-card h4 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .product-card p {
+      color: #718096;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+      }
+
+      #menuToggle {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>CUFFEDBOYZCLUB</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Contact</a>
+      <a href="#">Login</a>
+    </nav>
+    <button id="menuToggle">&#9776;</button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu">&times;</button>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Timeless Elegance</h2>
+      <p>Explore our curated collection of designer fashion</p>
+      <a href="#">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured">
+    <h3>Featured Collection</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="img/0fbcf727-e336-42e3-b36d-d5896fd56927.jfif" alt="Silk Evening Gown">
+        <div>
+          <h4>man </h4>
+          <p>R12,999</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="img/2fef64d8-dbe8-4fa4-a5d4-ea65d39fb957.jfif" alt="Leather Handbag">
+        <div>
+          <h4>women </h4>
+          <p>R5,799</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img/af57db72-0b8f-4d23-b24d-86a7e25aca92.jfif" alt="Leather Handbag">
+        <div>
+          <h4>women clothes</h4>
+          <p>R5,799</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img/882b63c8-6b6e-4a9c-81b9-160e5a354b2f.jfif" alt="Leather Handbag">
+        <div>
+          <h4>summer </h4>
+          <p>R5,799</p>
+        </div>
+      </div>
+      <!-- Add more products as needed -->
+    </div>
+  </section>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
